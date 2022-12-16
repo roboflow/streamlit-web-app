@@ -19,10 +19,14 @@ Every week we create tutorials showing you the best new updates in Computer Visi
 # clone the repository and navigate to the root directory
 git clone git@github.com:roboflow-ai/streamlit-web-app.git
 cd streamlit-web-app
+cd streamlit
 
 # setup python environment and activate it
 python3 -m venv venv
 source venv/bin/activate
+
+# install the requirements
+pip install -r requirements.txt
 
 streamlit run Home.py
 ```
