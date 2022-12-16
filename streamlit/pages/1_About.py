@@ -16,10 +16,10 @@ st.write("""
 
 st.write("# How to Use this App:")
 
-video_file = open('pages/Roboflow_Streamlit-Object-Detection.mp4', 'rb')
-video_bytes = video_file.read()
-
-st.video(video_bytes)
+st.write("""
+##### Roboflow: Streamlit Computer Vision App for Web Browser Deployment
+[![Roboflow: Streamlit Computer Vision App for Web Browser Deployment](https://img.youtube.com/vi/NXQ2Ktrh2BY/0.jpg)](https://www.youtube.com/watch?v=NXQ2Ktrh2BY)
+""")
 
 st.write("""
 #### Each video below provides a 60-second overview into a different computer vision problem-type.
