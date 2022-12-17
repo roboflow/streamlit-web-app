@@ -355,10 +355,19 @@ with st.form("project_access"):
     st.write("*** Don't forget to upload an image (jpg, jpeg, or png) to be predicted!!! ***")
     if submitted:
         st.write("Loading model...")
-        extracted_url = project_url_od.split("https://app.roboflow.com/")[1]
-        workspace_id = extracted_url.split("/")[0]
-        model_id = extracted_url.split("/")[1]
-        version_number = extracted_url.split("/")[2]
+        extracted_url = project_url_od.split("roboflow.com/")[1]
+        if "model" in project_url_od.split("roboflow.com/")[1]:
+            workspace_id = extracted_url.split("/")[0]
+            model_id = extracted_url.split("/")[1]
+            version_number = extracted_url.split("/")[3]
+        elif "deploy" in project_url_od.split("roboflow.com/")[1]:
+            workspace_id = extracted_url.split("/")[0]
+            model_id = extracted_url.split("/")[1]
+            version_number = extracted_url.split("/")[3]
+        else:
+            workspace_id = extracted_url.split("/")[0]
+            model_id = extracted_url.split("/")[1]
+            version_number = extracted_url.split("/")[2]
 
 if uploaded_file_od != None:
     # User-selected image.
