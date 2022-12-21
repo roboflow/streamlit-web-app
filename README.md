@@ -14,22 +14,41 @@ Every week we create tutorials showing you the best new updates in Computer Visi
 [![Roboflow: Streamlit Computer Vision App for Web Browser Deployment](https://img.youtube.com/vi/NXQ2Ktrh2BY/0.jpg)](https://www.youtube.com/watch?v=NXQ2Ktrh2BY)
 
 ## 💻 run locally
-
-```console
-# clone the repository and navigate to the root directory
-git clone git@github.com:roboflow-ai/streamlit-web-app.git
+Complete these steps with your console/terminal
+```
+# clone the repository
+git clone https://github.com/roboflow/streamlit-web-app.git
+```
+```
+# navigate to the root directory
 cd streamlit-web-app
 cd streamlit
-
-# setup python environment and activate it
+```
+```
+# set up your python environment and activate it
 python3 -m venv venv
 source venv/bin/activate
-
+```
+```
 # install the requirements
 pip install -r requirements.txt
-
+```
+```
+# run the app
 streamlit run Home.py
 ```
+
+### Troubleshooting:
+* For Mac users: be sure that you have [Homebrew](https://brew.sh/) installed.
+* Unable to resolve wheel for `av` or `aiortc` packages: Install `pkg-config` by executing `brew install pkg-config` in your Terminal
+* If you wish to process video streams with Streamlit apps, be sure to also have `ffmpeg` installed: after installing Homebrew, execute `brew install ffmpeg` in your Terminal
+
+-- Check here for more on `ffmpeg` installation: https://github.com/roboflow/video-inference#requirements
+* Ensure that you have `opencv-python-headless` installed in your environment, instead of `opencv-python`
+
+* Unable to install the `av` package with `pip`? Try executing `conda install av -c conda-forge` in your Terminal
+
+-- Note: [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is required for this method. Be sure that `conda-forge` has been made available in your channels. https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge
 
 ## Next Steps:
 1. Customize the app further for your use case: https://docs.streamlit.io
