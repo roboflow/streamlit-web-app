@@ -43,7 +43,7 @@ pyarrow==10.0.0
 pycparser==2.21
 pydeck==0.8.0
 pyee==9.0.4
-Pygments==2.13.0
+Pygments==2.15.0
 pylibsrtp==0.7.1
 Pympler==1.0.1
 pyparsing==2.4.7
